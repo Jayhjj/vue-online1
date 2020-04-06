@@ -1,30 +1,40 @@
 <template>
-    <div id="m-header">
-        <el-menu
-        :default-active="activeIndex2"
-        class="el-menu-demo"
-        mode="horizontal"
-        @select="handleSelect"
-        background-color="#545c64"
-        text-color="#fff"
-        active-text-color="#ffd04b">
-            <el-submenu :index="item.id"  v-for="(item,index) in tabcontent" :key="index">
-                <template   slot="title">{{item.text}}</template>
-                <el-menu-item   v-for="(childItem,index) in item.children" :key="index" :index="childItem.id">
-                    {{childItem.text}}
-                </el-menu-item>
-            </el-submenu>
+  <div class="head">
+    <el-row :gutter="20">
+      <el-col :span="8">qclp</el-col>
+      <el-col :span="16">
+        <el-menu 
+          :default-active="activeIndex"
+          class="el-menu-demo"
+          mode="horizontal"
+          @select="handleSelect"
+          >
+          <div v-for="(item,index) in tabcontent" :key="index" style="display:inline-block;">
+             <el-submenu v-if="item.children" :index="item.id">
+              <template slot="title">{{item.text}}</template>
+              <el-menu-item v-for="(sub,indey) in item.children" :key="indey" :index="sub.id">
+                {{sub.text}}
+              </el-menu-item>
+             </el-submenu>
+              <el-menu-item v-else :index="item.id">
+                {{item.text}}
+              </el-menu-item>
+          </div>
         </el-menu>
-    </div>
+      </el-col>
+    </el-row>
+  </div>
 </template>
 
-
-
 <script>
-  export default {
-    data() {
-      return {
-        activeIndex2: '1',
+
+export default {
+  components: {
+    
+  },
+  data() {
+    return {
+      activeIndex: '1',
         tabcontent:[
             {
                 id:'1',
@@ -158,26 +168,39 @@
             {
                 id:'7',
                 text:'试味间',
-                children:[]
+                // children:[]
             },
             {
                 id:'8',
                 text:'联系我们',
-                children:[]
+                // children:[]
             }
         ]
       };
+  },
+  methods: {
+    handleClick() {
+      if (this.activeName == "主页") this.$router.push('/')
+      if (this.activeName == "归档") this.$router.push('/file')
+      if (this.activeName == "标签") this.$router.push('/category')
+      if (this.activeName == "关于我") this.$router.push('/profile')
     },
-    methods: {
-      handleSelect(key, keyPath) {
-        console.log(key, keyPath);
-      }
+    handleSelect(key, keyPath) {
+      console.log(key, keyPath);
     }
   }
+}
 </script>
 
-
 <style lang="stylus" scoped>
-#m-header{
-}
+.head
+  width 100%
+  // display flex
+  background-color #fff
+  height 60px
+  line-height 60px
+  justify-content space-between
+  box-shadow: 0 3px 3px rgba(100, 100, 100, .3)
+ 
 </style>
+
