@@ -5,11 +5,12 @@ import Home from '../views/Home.vue'
 // import YHeader from '/common/header'
 Vue.use(VueRouter)
 
-const routes = [{
-        path: '/',
-        name: 'Home',
-        component: Home
-    },
+const routes = [
+    // {
+    //     path: '/',
+    //     name: 'Home',
+    //     component: Home
+    // },
     {
         path: '/about',
         name: 'About',

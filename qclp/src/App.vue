@@ -1,11 +1,16 @@
 <template>
   <div id="app">
     <router-view class="main"></router-view>
+    <nav-bar/>
   </div>
 </template>
 <script>
+import navBar from './components/Navbar'
   export default {
-    name: 'app'
+    name: 'app',
+    components:{
+      navBar
+    }
   }
 </script>
 <style >
