@@ -1,9 +1,15 @@
 <template>
   <div class="head">
+<<<<<<< HEAD
       <div class="header">
         <el-row  type="flex" class="row-bg" justify="space-around">
       <!-- <el-col :span="8">qclp</el-col> -->
       <el-col :span="6">
+=======
+    <el-row :gutter="20">
+      <el-col :span="8">qclp</el-col>
+      <el-col :span="16">
+>>>>>>> 059d2eee5c745feae82ec5c65d3a106c6fd9483d
         <el-menu 
           :default-active="activeIndex"
           class="el-menu-demo"
@@ -23,6 +29,7 @@
           </div>
         </el-menu>
       </el-col>
+<<<<<<< HEAD
       <el-col :span="6">qclp</el-col>
       <el-col :span="6" >
         <el-menu 
@@ -46,12 +53,22 @@
       </el-col>
     </el-row>
       </div>
+=======
+    </el-row>
+>>>>>>> 059d2eee5c745feae82ec5c65d3a106c6fd9483d
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
 export default {
   components: {
+=======
+
+export default {
+  components: {
+    
+>>>>>>> 059d2eee5c745feae82ec5c65d3a106c6fd9483d
   },
   data() {
     return {
@@ -133,11 +150,15 @@ export default {
             {
                 id:'4',
                 text:'餐厅查询'
+<<<<<<< HEAD
             }   
         ],
         
          activeIndex1: '1',
          tabcontent1:[
+=======
+            },
+>>>>>>> 059d2eee5c745feae82ec5c65d3a106c6fd9483d
             {
                 id:'5',
                 text:'加盟合作',
@@ -219,6 +240,7 @@ export default {
 
 <style lang="stylus" scoped>
 .head
+<<<<<<< HEAD
     margin 0
     padding 0
   width 100%
@@ -255,3 +277,15 @@ div
     font-size 18px
 
 </style>
+=======
+  width 100%
+  // display flex
+  background-color #fff
+  height 60px
+  line-height 60px
+  justify-content space-between
+  box-shadow: 0 3px 3px rgba(100, 100, 100, .3)
+ 
+</style>
+
+>>>>>>> 059d2eee5c745feae82ec5c65d3a106c6fd9483d
