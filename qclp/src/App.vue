@@ -2,14 +2,17 @@
   <div id="app">
     <router-view class="main"></router-view>
     <nav-bar/>
+    <vue-awesome-swiper/>
   </div>
 </template>
 <script>
 import navBar from './components/Navbar'
+import vueAwesomeSwiper from './components/vueAwesomeSwiper'
   export default {
     name: 'app',
     components:{
-      navBar
+      navBar,
+      vueAwesomeSwiper
     }
   }
 </script>
