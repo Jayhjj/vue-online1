@@ -1,20 +1,17 @@
 <template>
   <div class="head">
-<<<<<<< HEAD
       <div class="header">
         <el-row  type="flex" class="row-bg" justify="space-around">
       <!-- <el-col :span="8">qclp</el-col> -->
       <el-col :span="6">
-=======
-    <el-row :gutter="20">
-      <el-col :span="8">qclp</el-col>
-      <el-col :span="16">
->>>>>>> 059d2eee5c745feae82ec5c65d3a106c6fd9483d
         <el-menu 
           :default-active="activeIndex"
           class="el-menu-demo"
           mode="horizontal"
           @select="handleSelect"
+          background-color="#545c64"
+          text-color="#fff"
+          active-text-color="#ffd04b"
           >
           <div v-for="(item,index) in tabcontent" :key="index" style="display:inline-block;">
              <el-submenu v-if="item.children" :index="item.id">
@@ -29,14 +26,17 @@
           </div>
         </el-menu>
       </el-col>
-<<<<<<< HEAD
-      <el-col :span="6">qclp</el-col>
+      <el-col :span="6" >qclp</el-col>
       <el-col :span="6" >
         <el-menu 
           :default-active="activeIndex1"
           class="el-menu-demo"
           mode="horizontal"
           @select="handleSelect"
+          background-color="#545c64"
+          text-color="#fff"
+          active-text-color="#ffd04b"
+         
           >
           <div v-for="(item,index) in tabcontent1" :key="index" style="display:inline-block;">
              <el-submenu v-if="item.children" :index="item.id">
@@ -53,22 +53,12 @@
       </el-col>
     </el-row>
       </div>
-=======
-    </el-row>
->>>>>>> 059d2eee5c745feae82ec5c65d3a106c6fd9483d
   </div>
 </template>
 
 <script>
-<<<<<<< HEAD
 export default {
   components: {
-=======
-
-export default {
-  components: {
-    
->>>>>>> 059d2eee5c745feae82ec5c65d3a106c6fd9483d
   },
   data() {
     return {
@@ -150,15 +140,11 @@ export default {
             {
                 id:'4',
                 text:'餐厅查询'
-<<<<<<< HEAD
             }   
         ],
         
          activeIndex1: '1',
          tabcontent1:[
-=======
-            },
->>>>>>> 059d2eee5c745feae82ec5c65d3a106c6fd9483d
             {
                 id:'5',
                 text:'加盟合作',
@@ -240,7 +226,6 @@ export default {
 
 <style lang="stylus" scoped>
 .head
-<<<<<<< HEAD
     margin 0
     padding 0
   width 100%
@@ -251,10 +236,10 @@ export default {
   justify-content space-between
   box-shadow: 0 3px 3px rgba(100, 100, 100, .3)
 //   box-shadow: 0 10px 10px rgba(0, 0, 0, .12), 0 0 16px rgba(0, 0, 0, .10)
-.header
-    width 100%
-     height 140px
-    line-height 100px
+// .header
+//     width 100%
+//      height 140px
+//      line-height 100px
      
 .el-menu.el-menu--horizontal {
     border-bottom: none ;
@@ -264,28 +249,19 @@ div
     font-size 40px
 .row-bg 
     // padding: 10px 0;
-    // background-color:blue;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, .12), 0 0 16px rgba(0, 0, 0, .10)
+    background-color:#545c64;
+    // text-color:#fff;
+    // active-text-color:#ffd04b;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, .16), 0 0 20px rgba(0, 0, 0, .16)
     height 140px
 .el-menu-demo
     // background-color:blue;
-    padding-top 40px
+  
+    padding-top 60px
 .el-menu-item
-    font-size 18px
+    // font-size 18px
     // color #fff
 .title
     font-size 18px
 
 </style>
-=======
-  width 100%
-  // display flex
-  background-color #fff
-  height 60px
-  line-height 60px
-  justify-content space-between
-  box-shadow: 0 3px 3px rgba(100, 100, 100, .3)
- 
-</style>
-
->>>>>>> 059d2eee5c745feae82ec5c65d3a106c6fd9483d
