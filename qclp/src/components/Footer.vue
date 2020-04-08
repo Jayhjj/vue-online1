@@ -1,13 +1,13 @@
 <template>
-  <div>
-    header
-  </div>
+    <div class="footer">
+
+    </div>
 </template>
 <script>
 export default {
-  
+    
 }
 </script>
-<style scoped>
+<style lang="stylus" scoped>
 
 </style>
